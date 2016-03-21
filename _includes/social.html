@@ -1,0 +1,11 @@
+<h6>Follow me</h6>
+
+<ul class="social-media">
+    {% for link in site.data.socialmedia %}
+    <li>
+        <a title="{{ link.title }}" href="{{ link.url }}" target="_blank"><i class="{{ link.class }}"></i></a>
+    </li>
+    {% endfor %}
+
+
+</ul>

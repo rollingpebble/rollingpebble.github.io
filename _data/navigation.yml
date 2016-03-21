@@ -1,0 +1,15 @@
+- title: "home"
+  url: ""
+  section: "home"
+
+- title: "archives"
+  url: "archives.html"
+  section: "archives"
+
+- title: "tags"
+  url: "tags.html"
+  section: "tags"
+
+- title: "about"
+  url: "about.html"
+  section: "about"

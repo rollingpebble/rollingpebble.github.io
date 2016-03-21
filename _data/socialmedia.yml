@@ -1,0 +1,19 @@
+- name: RSS
+  url: "/rss-feed.xml"
+  class: "fa fa-rss fa-2x"
+  title: "Subscribe to RSS"
+
+- name: Twitter
+  url: https://twitter.com/tarannum0887
+  class: "fa fa-twitter fa-2x"
+  title: "Follow on twitter"
+
+- name: GitHub
+  url: https://github.com/rollingpebble
+  class: "fa fa-github fa-2x"
+  title: "Follow on github"
+
+- name: LinkedIn
+  url: "https://www.linkedin.com/in/tarannum-ansari-49366a19"
+  class: "fa fa-linkedin fa-2x"
+  title: "Connect on linkedin"

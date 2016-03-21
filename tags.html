@@ -1,0 +1,57 @@
+---
+layout: tags
+section: tags
+---
+
+<!-- sort tags -IMPORTANT- do not split below statement as it starts capturing new line which causes problems- -->
+{% capture tagNamesAndCount %}{% for tag in site.tags %}{{ tag[0] }}##{{ tag[1].size}}$${% endfor %}{% endcapture %}
+
+{% assign sortedTags = tagNamesAndCount | split:'$$' | sort %}
+<!-- end sort tags -->
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h1 class="bm20">Tags</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2 hidden-xs">
+            <div class="well">
+                <ul>
+                {% for tag in sortedTags %}
+                    {% assign tagData = tag | split: '##' %}
+                    {% if tagData.size >= 2 %}
+                    <li><h4><a href="#{{ tagData[0] }}">{{ tagData[0] }}</a></h4></li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-8">
+            {% for tag in sortedTags %}
+            {% assign tagData = tag | split: '##' %}
+            {% if tagData.size >= 2 %}
+                <div class="article">
+                    <div class="well">
+                        <h3 class="tagHeader"> <span id="{{ tagData[0] }}"> &nbsp; </span> {{ tagData[0] }}({{ tagData[1] }})</h3>
+                        {% for post in site.posts %}
+                            {% if post.tags contains tagData[0] %}
+                                <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} - {{ post.title }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+

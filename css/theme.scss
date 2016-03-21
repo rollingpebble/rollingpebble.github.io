@@ -1,0 +1,177 @@
+---
+---
+
+@mixin transition($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+body {
+    padding-top: 60px;
+}
+
+.navbar-fixed-top {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.copyright {
+    color: #ffffff;
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    color: #ee4444;
+}
+
+.sidebar h1 {
+    color: #ee4444;
+    font-size: 1.3em;
+}
+
+.sidebar a {
+    color: #428bca;
+}
+
+.sidebar li {
+    margin-top: .7em;
+    line-height: 1em;
+}
+
+.sidebar a:hover {
+    color: #3071a9;
+}
+
+.container-left {
+    margin: 0;
+}
+
+.well h1 {
+    color: #ee4444;
+    font-size: 1.3em;
+}
+
+.author {
+    color: #ee4444;
+}
+
+.author a {
+    color: #ee4444;
+}
+
+.footer-distributed {
+    background-color: #292c2f;
+    font: normal 16px sans-serif;
+    padding: 15px 25px 0px 10px;
+    margin-top: 150px;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+//********************************************************
+//                    Social Links
+//********************************************************
+ul.social-media {
+    text-align: center;
+    padding: 0 0 0 0;
+    li {
+        display: inline-block;
+    }
+    li > a {
+        width: 45px;
+        height: 45px;
+        @include transition(color 0.2s);
+        display: inline-block;
+        color: white;
+        &:hover {
+            color: #3CA2A2;
+        }
+    }
+}
+
+div.post-meta {
+    border-width: 1px 0;
+    margin: -6px 0 10px 0px;
+    ul {
+        display: inline;
+        padding-left: 0px;
+    }
+    ul > li {
+        display: inline;
+        padding: 0 0 5px 20px;
+    }
+    .post-time {
+        display: inline;
+        //    float: right;
+    }
+    .btn {
+        padding: 1px 5px 1px 5px;
+    }
+}
+
+hr {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 0;
+    border-top: 1px solid #000;
+}
+
+.tagHeader span {
+        margin-top: -3.8em;        /* Size of fixed header */
+        padding-bottom: 2em;
+        display: block;
+}
+
+/* CSS-Classes to add margin at top or bottom
+------------------------------------------------------------------- */
+.tm5 { margin-top: -5px !important; }
+.tm12 { margin-top: -12px !important; }
+.tm10{ margin-top: -10px !important; }
+.tm30{ margin-top: -30px !important; }
+.t5 { margin-top: 5px !important; }
+.t10 { margin-top: 10px !important; }
+.t15 { margin-top: 15px !important; }
+.t20 { margin-top: 20px !important; }
+.t30 { margin-top: 30px !important; }
+.t40 { margin-top: 40px !important; }
+.t50 { margin-top: 50px !important; }
+.t60 { margin-top: 60px !important; }
+.t70 { margin-top: 70px !important; }
+.t80 { margin-top: 80px !important; }
+.t90 { margin-top: 90px !important; }
+.t150 { margin-top: 150px !important; }
+
+
+.bm0{ margin-bottom: 0px !important; }
+.bm10{ margin-bottom: 10px !important; }
+.bm20{ margin-bottom: 20px !important; }
+.bm30{ margin-bottom: 30px !important; }
+.bm40{ margin-bottom: 40px !important; }
+
+.b5{ margin-bottom: 5px !important; }
+.b10 { margin-bottom: 10px !important; }
+.b15 { margin-bottom: 15px !important; }
+.b20 { margin-bottom: 20px !important; }
+.b30 { margin-bottom: 30px !important; }
+.b60 { margin-bottom: 60px !important; }
+.b100 { margin-bottom: 100px !important; }
+
+
+.l15 { margin-left: 15px !important; }
+.r15 { margin-right: 15px !important; }
+.r6 { margin-right: 6px !important; }
+
+.pl0 { padding-left: 0px !important; }
+.pr0  { padding-right: 0px !important; }
+.pl20 { padding-left: 20px !important; }
+.pr5  { padding-right: 5px !important; }
+.pr10 { padding-right: 10px !important; }
+.pr20 { padding-right: 20px !important; }

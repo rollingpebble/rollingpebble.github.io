@@ -1,0 +1,39 @@
+---
+layout: default
+section: archives
+---
+
+<h1>Archives</h1>
+
+{% assign count = 0 %}
+{% for post in site.posts %}
+
+    {% assign currentYear = post.date | date: "%Y" %}
+    {% assign prevYear = post.previous.date | date: "%Y" %}
+    {% assign count = count | plus: 1 %}
+
+    {% capture postsHtml %}
+        {{ postsHtml }}
+        <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} - {{ post.title }}</a></li>
+    {% endcapture %}
+
+
+    {% if currentYear != prevYear %}
+    <div class="article">
+        <div class="well">
+
+        <h3>{{ currentYear }}({{ count }})</h3>
+            {% assign count = 0 %}
+                <ul>
+                    {{ postsHtml }}
+                </ul>
+            {% assign postsHtml = '' %}
+        </div>
+    </div>
+    {% endif %}
+
+{% endfor %}
+
+
+
+
