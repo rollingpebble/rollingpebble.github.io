@@ -30,8 +30,7 @@ the latest changes. Pull requests are encouraged and accepted!
 
 ok.
 
-Installation
-============
+## Installation ##
 
 If you don't have a blog already on github, start by cloning this repository.
 Best to do that directly on github and then clone that down to your computer.

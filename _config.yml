@@ -1,7 +1,7 @@
 # Jekyll configuration
 
-name: Rolling Pebbles
-description: Rolling Pebbles
+name: rolling pebble
+description: rolling pebble
 
 # url is currently only used only for the RSS feed in feed.xml
 url: https://www.rollingpebbles.com
@@ -31,10 +31,3 @@ exclude: ['README.md', 'LICENSE']
 
 num_posts_home: 3
 
-social:
-  github: streetturtle
-  stackoverflow: ''
-  linkedin:
-  instagram: ''
-  lastfm: ''
-  rss: feed.xml

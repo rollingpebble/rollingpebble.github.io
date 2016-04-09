@@ -1,10 +1,107 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Rolling Pebbles</title>
-		<description>Rolling Pebbles</description>
+		<title>rolling pebble</title>
+		<description>rolling pebble</description>
 		<link>https://www.rollingpebbles.com</link>
 		<atom:link href="https://www.rollingpebbles.com/feed.xml" rel="self" type="application/rss+xml" />
+		
+			<item>
+				<title>Tech Behind this Blog</title>
+				<description>&lt;p&gt;From last 2-3 weeks I have been working on creating this blog. Still there are few items remaining to be completed.&lt;/p&gt;
+
+&lt;p&gt;I was looking for something that is free and provides maximum flexibility. Static site generators and &lt;a href=&quot;https://pages.github.com&quot;&gt;Github pages&lt;/a&gt; support for static sites looked promising. One of the things that I loved of this setup is writing posts in your preferred editor and complete control over your data.
+&lt;!--more--&gt;
+Initially I was inclined towards python based site generators as it will give me an opportunity to learn python but I ended up with &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; as of its github pages support. Now I am happy with Jekyll even though I am not using github pages jekyll support.&lt;/p&gt;
+
+&lt;h3 id=&quot;initial-setup&quot;&gt;Initial Setup&lt;/h3&gt;
+
+&lt;script type=&quot;text/javascript&quot; src=&quot;https://public.tableau.com/javascripts/api/viz_v1.js&quot;&gt;&lt;/script&gt;
+&lt;div class=&quot;tableauPlaceholder&quot; style=&quot;width: 804px; height: 669px;&quot;&gt;&lt;noscript&gt;&lt;a href=&quot;#&quot;&gt;&lt;img alt=&quot;Startup Quadrant &quot; src=&quot;https:&amp;#47;&amp;#47;public.tableau.com&amp;#47;static&amp;#47;images&amp;#47;Pr&amp;#47;Practice-ParameterControlofDynamicsets&amp;#47;StartupQuadrant&amp;#47;1_rss.png&quot; style=&quot;border: none&quot; /&gt;&lt;/a&gt;&lt;/noscript&gt;&lt;object class=&quot;tableauViz&quot; width=&quot;804&quot; height=&quot;669&quot; style=&quot;display:none;&quot;&gt;&lt;param name=&quot;host_url&quot; value=&quot;https%3A%2F%2Fpublic.tableau.com%2F&quot; /&gt; &lt;param name=&quot;site_root&quot; value=&quot;&quot; /&gt;&lt;param name=&quot;name&quot; value=&quot;Practice-ParameterControlofDynamicsets&amp;#47;StartupQuadrant&quot; /&gt;&lt;param name=&quot;tabs&quot; value=&quot;no&quot; /&gt;&lt;param name=&quot;toolbar&quot; value=&quot;yes&quot; /&gt;&lt;param name=&quot;static_image&quot; value=&quot;https:&amp;#47;&amp;#47;public.tableau.com&amp;#47;static&amp;#47;images&amp;#47;Pr&amp;#47;Practice-ParameterControlofDynamicsets&amp;#47;StartupQuadrant&amp;#47;1.png&quot; /&gt; &lt;param name=&quot;animate_transition&quot; value=&quot;yes&quot; /&gt;&lt;param name=&quot;display_static_image&quot; value=&quot;yes&quot; /&gt;&lt;param name=&quot;display_spinner&quot; value=&quot;yes&quot; /&gt;&lt;param name=&quot;display_overlay&quot; value=&quot;yes&quot; /&gt;&lt;param name=&quot;display_count&quot; value=&quot;yes&quot; /&gt;&lt;param name=&quot;showTabs&quot; value=&quot;y&quot; /&gt;&lt;/object&gt;&lt;/div&gt;
+
+&lt;p&gt;I started looking out for available themes built on jekyll for a starting point. Bootstrap and foundation both are great front end frameworks. As most of the themes I saw were developed on Bootstrap, I thought of using foundation as it might help me to get a different look and feel.&lt;/p&gt;
+
+&lt;p&gt;There are not many boilerplate code/themes available for jekyll in &lt;a href=&quot;http://foundation.zurb.com/&quot;&gt;foundation&lt;/a&gt;. I started building it ground up following instructions from &lt;a href=&quot;http://learningwithsage.com/wp/a-guide-to-setting-up-a-jekyll-and-foundation-based-site-in-github/&quot;&gt;Code daddy&lt;/a&gt;. It started appearing to be a time consuming task and in the mean time I found an excellent theme, &lt;a href=&quot;https://phlow.github.io/feeling-responsive/&quot;&gt;Feeling responsive&lt;/a&gt; developed on foundation. The best part I liked about this theme is it contains all the possible layouts I might need.&lt;/p&gt;
+
+&lt;p&gt;After customizing and including only the required parts of the theme, I have my blog up and running on github(with jekyll support) within few days. Thanks to &lt;a href=&quot;https://phlow.github.io/feeling-responsive/&quot;&gt;feeling responsive&lt;/a&gt;, &lt;a href=&quot;http://jekyllrb.com&quot;&gt;jekyll&lt;/a&gt;, &lt;a href=&quot;https://pages.github.com&quot;&gt;github pages&lt;/a&gt; and &lt;a href=&quot;http://foundation.zurb.com/&quot;&gt;foundation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;At this point I had following requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Provide search on posts.&lt;/li&gt;
+  &lt;li&gt;Build an archive page.&lt;/li&gt;
+  &lt;li&gt;Easy way to update the js/ui libraries.&lt;/li&gt;
+  &lt;li&gt;Automation of tasks for js/css minification and deployment.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;search-and-archives&quot;&gt;Search and Archives&lt;/h3&gt;
+
+&lt;p&gt;There are many available ways to provide search on static sites. Google custom search is a good option but it may require creation of an overlay or moving the control to a different page.&lt;/p&gt;
+
+&lt;p&gt;For archives,  it will be nice to have an easy access of posts by year/month or tag. One way to achieve this is  creating separate pages for each tag, month/year, which does not look a great solution.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://lunrjs.com&quot;&gt;Lunr&lt;/a&gt; is an excellent javascript library that provides client side search based on reverse document lookup. It will be very fast as no network calls are involved.&lt;/p&gt;
+
+&lt;p&gt;One alternative for lunr can be using Bloom filters. Bloom filters provide fast lookups to check if a word is present in a  document(using hash of the document). It works on probability model and may result in returning a document even if the searched word is not present in it. However it will not miss any documents containing the searched word. Using Bloom filters will require additional work to support searches on multiple words. I continued with lunr as it will be easy to integrate and sufficient for the needs.&lt;/p&gt;
+
+&lt;p&gt;Lunr provides an api for indexing and searching. All posts/pages to be made searchable will be added for indexing. Enabling search for all content of the posts may cause performance issues in future when number of blogs grow.&lt;/p&gt;
+
+&lt;p&gt;Indexing is relatively a slow process. One approach for optimization is indexing at the backend. Lunr provides support to create index file and loading it later. I used node.js environment for executing javascript at backend for index creation.&lt;/p&gt;
+
+&lt;p&gt;I merged my ideas for archives and search into a single page:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Search is enabled only for tags.&lt;/li&gt;
+  &lt;li&gt;A section is added on this page containing all the tags and number of posts under each tag.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It may sound an over-optimization on limiting the searches to tags for performance but it is sufficient for my needs.
+Including year and month also in the search will solve the problem for archive pages.&lt;/p&gt;
+
+&lt;p&gt;A point to note about lunr(version: 0.5.11) is it provides searches only for “and” conditions between the search terms. I hope, support for boolean queries will eventually happen in future releases.&lt;/p&gt;
+
+&lt;h3 id=&quot;github-pages-with-nojekyll&quot;&gt;Github pages with nojekyll&lt;/h3&gt;
+
+&lt;p&gt;Index creation at backend requires some support from github pages while it generates the site using jekyll. As github pages executes jekyll in safe mode, I cant add any plugin for indexing at backend. Thus I have to manually index at my local machine and push it to github.&lt;/p&gt;
+
+&lt;p&gt;It seems like a big limitation for not having any possibility to add plugins to github pages. It may cause more problems in future when I work on some data sources for doing some stats and putting few D3 plots on the blog.&lt;/p&gt;
+
+&lt;p&gt;This resulted in creating two branches on github: one branch for code and other branch(master) for the generated content.&lt;/p&gt;
+
+&lt;h3 id=&quot;maintaining-updates-of-libs&quot;&gt;Maintaining updates of libs&lt;/h3&gt;
+
+&lt;p&gt;While working for indexing at backend, I saw a new release for lunr. To use it I need to again copy it to my dev environment. It was definitely not a great way for maintaining updates.&lt;/p&gt;
+
+&lt;p&gt;From my limited or no experience with UI, I was not aware of any tools for package management. I found an excellent &lt;a href=&quot;http://tech.pro/tutorial/1190/package-managers-an-introductory-guide-for-the-uninitiated-front-end-developer#front_end_developers&quot;&gt;post&lt;/a&gt; on package management tools: &lt;a href=&quot;https://www.npmjs.com&quot;&gt;npm&lt;/a&gt; and &lt;a href=&quot;http://bower.io&quot;&gt;bower&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Npm provides support for package management for backend js libraries. Bower is a package management tool for front end(browser) and provide support for js,html and css components.&lt;/p&gt;
+
+&lt;p&gt;Both Npm and Bower have very rich eco-systems around them. It seems like most, if not all, of the UI libraries are available though them.
+This resulted in installing all backend libraries(like lunr) using npm and front end libraries(like foundation) using bower.&lt;/p&gt;
+
+&lt;h3 id=&quot;automation&quot;&gt;Automation&lt;/h3&gt;
+
+&lt;p&gt;Grunt and Gulp are two great build tools available. As a matter of choice, I preferred gulp style of code over configuration. I found a great &lt;a href=&quot;http://stefanimhoff.de/2014/gulp-tutorial-1-intro-setup&quot;&gt;tutorial&lt;/a&gt; that helped me setup all my build process. I ended up using most of the directory structure and gulp tasks from this tutorial.&lt;/p&gt;
+
+&lt;p&gt;There are a lot of plugins available for gulp for doing almost every task that may be required. Whether it is a simple concat of js/css files, minifying js/css or deploying to gh-pages, a plugin is available for every task.&lt;/p&gt;
+
+&lt;p&gt;With help of gulp and these great plugins, I completely automated the build process. Now using just one command can generate the site using jekyll, creates index, do minify js and css and as well as push all the changes to the server(github pages).&lt;/p&gt;
+
+&lt;h3 id=&quot;client-side-mvc&quot;&gt;Client side MVC&lt;/h3&gt;
+
+&lt;p&gt;I have also used an MVC framework, &lt;a href=&quot;http://backbonejs.org&quot;&gt;backbone&lt;/a&gt; for creating archives page. Backbone helped in many ways like browser history and creating book-markable urls for searched tags. Overall it gave a good organization to the code which otherwise might have ended up in a convoluted structure of DOM manipulations using jquery.&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
+
+&lt;p&gt;Blog creation ended up taking more time than it was planned but I completely enjoyed the process. From package management to MVC frameworks, I learned of the many great things going on with UI.&lt;/p&gt;
+
+&lt;p&gt;While I liked the node.js excellent eco-system, I hope that same level of tools and packages for UI should be available for modern languages like clojure or scala. Javascript is not a great language to work on. It is relatively difficult to find issues with the code written in js and many times are silently ignored by interpreter.&lt;/p&gt;
+
+</description>
+				<pubDate>Fri, 10 Apr 2015 00:00:00 +0530</pubDate>
+				<link>https://www.rollingpebbles.com/2015/04/10/tech-behind-this-blog.html</link>
+				<guid isPermaLink="true">https://www.rollingpebbles.com/2015/04/10/tech-behind-this-blog.html</guid>
+			</item>
 		
 			<item>
 				<title>Jekyll Clean Theme</title>
@@ -32,7 +129,9 @@ and you can do the same thing for any other sections added to the sidebar.&lt;/p
 &lt;p&gt;Don’t forget to occassionally merge against my upstream repository so you can get
 the latest changes. Pull requests are encouraged and accepted!&lt;/p&gt;
 
-&lt;h1 id=&quot;installation&quot;&gt;Installation&lt;/h1&gt;
+&lt;p&gt;ok.&lt;/p&gt;
+
+&lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt;
 
 &lt;p&gt;If you don’t have a blog already on github, start by cloning this repository.
 Best to do that directly on github and then clone that down to your computer.&lt;/p&gt;
@@ -162,71 +261,6 @@ respective owners:&lt;/p&gt;
 				<pubDate>Sat, 23 Aug 2014 04:55:06 +0530</pubDate>
 				<link>https://www.rollingpebbles.com/2014/08/23/jekyll-clean-theme.html</link>
 				<guid isPermaLink="true">https://www.rollingpebbles.com/2014/08/23/jekyll-clean-theme.html</guid>
-			</item>
-		
-			<item>
-				<title>Lorem ipsum dolor sit amet</title>
-				<description>&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quam metus, commodo sit amet ante a, finibus efficitur lorem. Maecenas egestas purus in tempor volutpat. Sed dapibus tortor nec sem suscipit ullamcorper. Nulla nec lorem lacus. Phasellus condimentum massa quis dolor consequat viverra ut ac magna. Ut a consequat nisi. Vivamus at leo ut turpis convallis lacinia. Curabitur eu placerat quam. Donec ultricies faucibus dui, a tincidunt lorem lobortis condimentum.&lt;/p&gt;
-
-&lt;p&gt;Quisque aliquet consectetur justo sit amet convallis. Nunc vel aliquet ipsum, sit amet elementum justo. Vivamus id magna mi. Cras luctus est vel ipsum sagittis pellentesque. Vivamus ante elit, porttitor vitae quam quis, fermentum malesuada risus. Integer nec lectus vel lacus cursus tristique in euismod ipsum. Duis ut varius enim. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi et elit eu tortor lacinia sollicitudin non in lacus.&lt;/p&gt;
-
-&lt;p&gt;Integer at viverra turpis. Duis aliquam mattis sapien tempor eleifend. Mauris nec eleifend risus, quis mollis neque. Vivamus non dapibus justo, vel ornare magna. Nunc in nulla venenatis, imperdiet diam in, accumsan massa. Etiam congue augue ipsum, sit amet rutrum nisi blandit quis. Cras in lectus non lorem auctor consequat a vel sem. Aliquam erat volutpat. Fusce lobortis vel orci vitae ullamcorper. Phasellus id eleifend eros. Mauris vulputate, nisi vel auctor auctor, quam enim tincidunt felis, vitae fermentum odio tortor eget est. Integer ornare blandit lectus a accumsan.&lt;/p&gt;
-</description>
-				<pubDate>Wed, 23 Jul 2014 04:55:06 +0530</pubDate>
-				<link>https://www.rollingpebbles.com/2014/07/23/Lorem-ipsum-dolor-sit-amet.html</link>
-				<guid isPermaLink="true">https://www.rollingpebbles.com/2014/07/23/Lorem-ipsum-dolor-sit-amet.html</guid>
-			</item>
-		
-			<item>
-				<title>Maecenas feugiat fringilla nibh</title>
-				<description>&lt;p&gt;Maecenas feugiat fringilla nibh ut mattis. Sed non metus sit amet mi luctus feugiat in quis sem. Vivamus pulvinar commodo bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Maecenas sapien nulla, eleifend in dolor et, rutrum maximus velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse tempus malesuada egestas. Phasellus pulvinar vulputate urna in tempor. In vel sapien ullamcorper, condimentum ipsum ut, porttitor turpis. Nam auctor erat sed lectus tempus euismod. Nunc ipsum quam, condimentum ac bibendum sit amet, sodales nec metus.&lt;/p&gt;
-
-&lt;p&gt;Vivamus a ullamcorper ipsum. Donec dictum eleifend massa, rhoncus consequat sem tempor nec. Ut bibendum luctus gravida. Nullam eleifend laoreet quam, nec tincidunt dolor tincidunt non. Aenean vel magna massa. Pellentesque sit amet tincidunt ante. Nulla posuere varius elit eu consequat. Sed vitae tortor scelerisque lacus eleifend condimentum. Nulla vitae neque sed lorem sagittis pretium eu nec est. Aliquam in euismod risus, vel vulputate orci.&lt;/p&gt;
-
-&lt;p&gt;Praesent sit amet auctor justo. Suspendisse pretium rutrum vehicula. Cras ut porta urna. Morbi massa odio, eleifend vitae dictum eget, mattis nec metus. Praesent pellentesque metus eu massa pharetra facilisis. Suspendisse potenti. Vestibulum pellentesque pharetra tristique. Nam ut lobortis felis. Proin sit amet consequat ipsum. Curabitur et mattis justo, sit amet feugiat lectus. Sed eleifend eget arcu non pretium. Suspendisse rhoncus erat quis leo laoreet rhoncus. Aliquam quis metus vitae enim cursus sodales. In euismod tortor id odio fermentum, non pretium ipsum iaculis. Quisque consectetur elementum nisi, et posuere odio vulputate ac. Ut consequat, velit eget fermentum ultrices, ligula odio fringilla diam, sit amet accumsan elit velit tempus dolor.&lt;/p&gt;
-</description>
-				<pubDate>Mon, 23 Jun 2014 04:55:06 +0530</pubDate>
-				<link>https://www.rollingpebbles.com/2014/06/23/Maecenas-feugiat-fringilla-nibh.html</link>
-				<guid isPermaLink="true">https://www.rollingpebbles.com/2014/06/23/Maecenas-feugiat-fringilla-nibh.html</guid>
-			</item>
-		
-			<item>
-				<title>Cum sociis natoque penatibus</title>
-				<description>&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus fermentum facilisis velit eu auctor. Maecenas tincidunt, leo tempor bibendum auctor, ligula lorem ultricies tellus, ac auctor lorem libero a sapien. Donec ac suscipit tellus. Quisque vitae placerat lorem. In ullamcorper malesuada risus, eget fringilla lacus dignissim at. Proin faucibus, nibh vel molestie scelerisque, lorem urna tempus lacus, id viverra odio dolor sit amet odio. In hendrerit, orci vel scelerisque luctus, arcu purus aliquet turpis, a bibendum nulla est et dui.&lt;/p&gt;
-
-&lt;p&gt;Praesent pellentesque posuere lectus eget condimentum. Ut vitae nisi diam. Quisque vitae ipsum magna. Aliquam pretium laoreet tortor quis volutpat. Donec congue, nisl nec consequat varius, enim enim consectetur felis, a viverra libero elit in ligula. Cras posuere ipsum vel mi scelerisque, eu interdum velit elementum. Duis eu posuere est. Ut vestibulum urna eu viverra fringilla. Aliquam tempus nisi eros, vitae posuere nulla fermentum in. Praesent et justo eros. Proin eleifend justo vel justo condimentum ullamcorper. Curabitur vel vehicula lectus. Mauris sed ex ac ipsum ultrices bibendum at id tortor. Aenean dictum magna ac nisi posuere euismod. Ut fermentum, nulla quis venenatis varius, risus nulla dictum felis, ut dictum eros libero vitae justo.&lt;/p&gt;
-
-&lt;p&gt;Integer aliquam tellus vel libero eleifend, condimentum euismod odio tincidunt. Vivamus felis ante, faucibus quis urna nec, volutpat pulvinar quam. Cras dictum libero ac augue bibendum, et pretium ex pharetra. Vivamus suscipit et erat id eleifend. Proin vulputate, quam sit amet pretium fermentum, felis neque scelerisque metus, a rhoncus quam nisi sit amet urna. Sed et commodo libero, laoreet rutrum eros. Vivamus tempor, leo eget scelerisque molestie, sapien augue viverra tortor, et semper arcu eros ut elit. Sed pulvinar ipsum in semper facilisis.&lt;/p&gt;
-</description>
-				<pubDate>Sun, 23 Jun 2013 04:55:06 +0530</pubDate>
-				<link>https://www.rollingpebbles.com/2013/06/23/Cum-sociis-natoque-penatibus.html</link>
-				<guid isPermaLink="true">https://www.rollingpebbles.com/2013/06/23/Cum-sociis-natoque-penatibus.html</guid>
-			</item>
-		
-			<item>
-				<title>Nulla vel risus dapibus</title>
-				<description>&lt;p&gt;Nulla vel risus dapibus, fringilla nunc id, interdum magna. Vivamus non diam egestas, bibendum elit sed, condimentum quam. Integer eu ipsum ultrices, tincidunt nibh at, auctor sem. Duis iaculis purus a aliquet gravida. Sed ornare, leo venenatis dignissim condimentum, nibh arcu iaculis dui, nec vulputate ante eros laoreet sem. Fusce dapibus, ante eu blandit tincidunt, odio quam vulputate libero, et interdum tellus lorem eleifend nisi. Nam elementum vel sapien sed rhoncus. Praesent commodo neque odio. Praesent a nisl nec neque laoreet dignissim. Quisque vitae felis a nisl sodales consequat ut ac mi. Etiam varius gravida accumsan. In sed lectus nec ipsum commodo efficitur. Ut vehicula diam eu justo pellentesque, in pulvinar lorem dapibus. Donec ornare metus vitae turpis malesuada, ut aliquet dolor vulputate. Aenean eget ipsum elit. Suspendisse tempor sagittis dictum.&lt;/p&gt;
-
-&lt;p&gt;Vivamus dapibus justo vitae tellus dignissim, non interdum odio egestas. Maecenas tincidunt sem non consequat bibendum. Aliquam cursus, enim sed rutrum porta, nisl tellus ultrices ipsum, vel vestibulum orci tellus sit amet quam. Pellentesque ut viverra lacus. Suspendisse potenti. Ut augue enim, hendrerit sed interdum sed, ullamcorper sit amet ex. Donec at mi at erat hendrerit commodo at non eros. Fusce commodo nec quam at rhoncus.&lt;/p&gt;
-
-&lt;p&gt;Aliquam molestie urna at turpis venenatis, et placerat lorem volutpat. Sed gravida arcu id lectus viverra eleifend. Sed in metus sit amet ante luctus dignissim. Etiam in sodales justo, in iaculis odio. Vestibulum accumsan felis vitae cursus pharetra. Nulla congue ipsum est, sed vulputate odio pulvinar id. Maecenas a sollicitudin turpis.&lt;/p&gt;
-</description>
-				<pubDate>Thu, 23 May 2013 04:55:06 +0530</pubDate>
-				<link>https://www.rollingpebbles.com/2013/05/23/Nulla-vel-risus-dapibus.html</link>
-				<guid isPermaLink="true">https://www.rollingpebbles.com/2013/05/23/Nulla-vel-risus-dapibus.html</guid>
-			</item>
-		
-			<item>
-				<title>Vivamus porttitor porta tortor</title>
-				<description>&lt;p&gt;Vivamus porttitor porta tortor at ullamcorper. Proin vel nisi magna. Vivamus vel velit laoreet, malesuada nunc nec, pulvinar velit. Vivamus sollicitudin ex quam, sit amet aliquet velit euismod in. Etiam rutrum augue orci, sed euismod risus vehicula eu. Proin quis velit mattis, sodales erat vitae, condimentum nulla. Vestibulum vitae imperdiet ligula. Etiam venenatis ultrices varius.&lt;/p&gt;
-
-&lt;p&gt;Vestibulum vulputate nulla hendrerit velit tempor, et fringilla urna placerat. In hac habitasse platea dictumst. Vestibulum sit amet molestie tortor, eu posuere magna. Donec rhoncus pharetra urna sed tempor. Aliquam erat volutpat. Nulla facilisi. Nam at ante condimentum, egestas massa sed, auctor orci. Aenean tincidunt, turpis et venenatis finibus, orci urna tempor ex, at mattis nisi nisi varius nisl. Pellentesque diam libero, dignissim vel nisl ut, placerat pharetra felis.&lt;/p&gt;
-
-&lt;p&gt;Curabitur venenatis neque eget odio tempor, vitae condimentum quam aliquam. Duis dui odio, auctor non ultricies nec, mollis nec elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eget elit at nisl auctor egestas. Vivamus nec turpis feugiat, dapibus metus et, fermentum lacus. Curabitur at blandit diam, non rutrum nulla. Quisque eget fermentum libero, in bibendum diam. Vestibulum eget porta est, in scelerisque metus. Donec in elit aliquet sapien ultrices tincidunt.&lt;/p&gt;
-</description>
-				<pubDate>Wed, 23 May 2012 04:55:06 +0530</pubDate>
-				<link>https://www.rollingpebbles.com/2012/05/23/Vivamus-porttitor-porta-tortor.html</link>
-				<guid isPermaLink="true">https://www.rollingpebbles.com/2012/05/23/Vivamus-porttitor-porta-tortor.html</guid>
 			</item>
 		
 	</channel>

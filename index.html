@@ -6,7 +6,7 @@ section: home
 {% for post in site.posts limit: site.num_posts_home %}
 <div class="article">
     <div class="well">
-        <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }} - {{ post.title }}</a></h1>
+        <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></h1>
         <div class="post-meta">
             <div class="post-time">
                 <time>{{ post.date | date_to_string }}</time>
@@ -18,13 +18,18 @@ section: home
             </ul>
         </div>
         <hr/>
-        {% if site.comments == true and post.comments == true and site.disqus != '' %}
-          <p class="author"><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">Comments</a></p>
-        {% endif %}
         <div class="content">
             {{ post.content }}
         </div>
+        {% if site.comments == true and post.comments == true %}
+        <p><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread"><u>Add/View Comments</u></a></p>
+        {% endif %}
     </div>
 </div>
 {% endfor %}
+<div class="article">
+    <div class="well" style="text-align: center">
+        <h2><a href="{{ site.baseurl }}/archives.html">Older Posts</a></h2>
+    </div>
+</div>
 

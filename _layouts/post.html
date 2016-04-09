@@ -23,19 +23,20 @@
             <div class="post-content">
             {{ content }}
             </div>
+            <hr/>
+            <p class="t20 b60">
+                {% if page.previous %}
+                <a  style="float: left" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous"> &leftarrow; Older Post</a>
+                {% endif %}
+                {% if page.next %}
+                <a style="float: right" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post &rightarrow; </a>
+                {% endif %}
+            </p>
             {% if page.comments %}
             <div id="disqus_thread">
             </div>
             {% endif %}
             </div>
-          </div>
-          <div class="pagination">
-              {% if page.next %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">Newer Post</a>
-              {% endif %}
-              {% if page.previous %}
-                <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">Older Post</a>
-              {% endif %}
           </div>
 
         </div>
