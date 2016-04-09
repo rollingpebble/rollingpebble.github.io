@@ -30,7 +30,7 @@ the latest changes. Pull requests are encouraged and accepted!
 
 ok.
 
-## Installation ##
+### Installation ###
 
 If you don't have a blog already on github, start by cloning this repository.
 Best to do that directly on github and then clone that down to your computer.
@@ -67,8 +67,7 @@ and \_posts, and so on, but in practice this is pretty simple.
 This is how I maintain my own blog which is based on this theme. The old history is
 sitting in an **old-master** branch that I can refer to when I need to.
 
-Running Locally
-===============
+### Running Locally
 
 Here's the exact set of packages I need to install on Debian to run jekyll
 locally with this theme for testing.
@@ -86,8 +85,7 @@ $ jekyll serve --baseurl=''
 
 Now browse to http://127.0.0.1:4000
 
-Disqus Comments
-===============
+### Disqus Comments
 
 Getting Disqus to work can be a bit more work than it seems like it should be.
 Make sure your Disqus account is correctly configured with the right domain
@@ -102,8 +100,7 @@ matter.
 More information on using Disqus with Jekyll is
 [documented here](https://help.disqus.com/customer/portal/articles/472138-jekyll-installation-instructions).
 
-Code Syntax Highlighting
-========================
+### Code Syntax Highlighting
 
 To use code syntax highlighting, use the following syntax:
 
@@ -132,8 +129,7 @@ print('You rolled a %d.' % roll)
 You can, of course, use any theme you wish, see the jekyll and pygments
 documentation for more details.
 
-License
-=======
+### License
 
 The content of this theme is distributed and licensed under a
 ![License Badge]({{ site.baseurl}}/images/cc_by_88x31.png)
